@@ -28,3 +28,5 @@ idade=input('Digite sua idade: ')
 peso=input('Digite o seu peso: ')
 
 print(nome, idade, peso)
+
+print('oi')
