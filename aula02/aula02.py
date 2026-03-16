@@ -29,4 +29,3 @@ peso=input('Digite o seu peso: ')
 
 print(nome, idade, peso)
 
-print('oi')
