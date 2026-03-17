@@ -94,6 +94,9 @@ print(troco)
     print(f'------Total: {total}------')
     print(f'------Quantidade: {i}------')
     pago=float(input('Digite o valor pago: '))
+    if pago<total:
+        print('Voce nao tem dinheiro para isso')
+        exit()
     troco=pago-total
     print(f'O troco é de {troco}')
 '''
