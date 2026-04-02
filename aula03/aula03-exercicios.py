@@ -211,6 +211,43 @@ print(f'Preço total R${preco_total}')
 #     print(f'Imposto {imposto}%')
 #     print(f'Preço total R${preco_total}')
 
+# def calcular(origem,peso,codigo):
+    
+#     match origem:
+#         case 1:
+#             imposto=35
+#         case 2:
+#             imposto=25
+#         case 3:
+#             imposto=15
+#         case 4:
+#             imposto=5
+#         case 5:
+#             imposto=0
+#         case _:
+#             print('codigo invalido')
+#             return
+        
+#     pesokg=peso*1000
+
+#     if codigo>=10 and codigo<=20:
+#         precokg=100
+#     elif codigo>=21 and codigo<=30:
+#         precokg=250
+#     else:
+#         precokg=340
+
+#     preco=pesokg*precokg
+#     preco_imposto=preco*imposto/100
+#     preco_total=preco+preco_imposto
+
+#     print(f'Peso em kg {pesokg}')
+#     print(f'Preço da carga R${preco}')
+#     print(f'Imposto {imposto}%')
+#     print(f'Preço total R${preco_total}')
+    
+# calcular(111,1000,11)
+
 #EX10
 a = float(input("Digite o lado A: "))
 b = float(input("Digite o lado B: "))
