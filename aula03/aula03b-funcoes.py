@@ -7,3 +7,6 @@ print_lyrics()
 
 print(print_lyrics)
 print(type(print_lyrics))
+
+print('oi')
+print('aiaiaia')
