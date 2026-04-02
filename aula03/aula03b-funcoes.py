@@ -10,3 +10,4 @@ print(type(print_lyrics))
 
 print('oi')
 print('aiaiaia')
+print('oioioi')
