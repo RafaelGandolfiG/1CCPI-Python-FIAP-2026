@@ -5,7 +5,7 @@ try:
     numero=int(numero)
 except Exception as erro:
     print(erro)
-    playsound(r"C:\Users\Rafael\Documents\1CCPI-Python-FIAP-2026\aula03\faaah.mp3")
+    playsound(r"C:\Users\EU\Documents\1CCPI-Python-FIAP-2026\aula03\faaah.mp3")
 
 #EX2
 numero=int(input('Digite um numero: '))
