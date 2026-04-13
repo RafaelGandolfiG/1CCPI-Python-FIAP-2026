@@ -11,19 +11,29 @@ def definir_taxa(parcelas):
     global taxa
     if parcelas<=6:
         taxa=0.05
-        return '5% ao mes'
+        return taxa
     elif parcelas<=12:
         taxa=0.08
-        return '8 % ao mes'
+        return taxa
     elif parcelas>=13 and parcelas<=24:
         taxa=0.1
-        return '10% ao mes'
+        return taxa
 
 def calcular_parcela(emprestimo,taxa,parcelas):
+    global pmt
     i=taxa
     n=parcelas
-    pmt=valor*(i*(1+i)**n)/(((1+i)**n)-1)
+    pmt=emprestimo*(i*(1+i)**n)/(((1+i)**n)-1)
     return pmt
+
+def calcular_total(parcela,parcelas):
+    global total
+    total=pmt*parcelas
+    return total
+
+def calcular_juros(total,emprestimo):
+    juros=total-emprestimo
+    return juros
 
 nome=input('Digite seu nome: ')
 idade=int(input('Digite sua idade: '))
@@ -32,8 +42,20 @@ emprestimo=float(input('Digite o valor do empréstimo: '))
 parcelas=int(input('Digite o numero de parcelas: '))
 
     
-aprovado=pode_aprovar(idade,renda,valor)
-taxa=definir_taxa(parcelas)
-parcela=calcular_parcela(emprestimo,taxa,parcelas)
-total=calcular_total(parcela,parcelas)
-juros=calcular_juros(total,valor)
+aprovado=pode_aprovar(idade,renda,emprestimo)
+
+if aprovado=='Aprovado':
+
+    taxa=definir_taxa(parcelas)
+    parcela=calcular_parcela(emprestimo,taxa,parcelas)
+    total=calcular_total(parcela,parcelas)
+    juros=calcular_juros(total,emprestimo)
+
+    print(f'Nome do cliente: {nome}')
+    print(f'Valor financiado: {emprestimo}')
+    print(f'Taxa de juros: {taxa*100}')
+    print(f'Valor da parcela: {round(parcela,2)}')
+    print(f'Total pago {round(total,2)}')
+    print(f'Total de juros: {round(juros,2)}')
+else:
+    print('reprovado')
