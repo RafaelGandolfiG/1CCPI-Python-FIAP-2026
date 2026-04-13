@@ -226,12 +226,15 @@ match origem:
 
 pesokg=peso*1000
 
-if codigo>=10 and codigo<=20:
-    precokg=100
-elif codigo<=30:
-    precokg=250
+if 10 <= codigo <= 20:
+    precokg = 100
+elif 21 <= codigo <= 30:
+    precokg = 250
+elif 31 <= codigo <= 40:
+    precokg = 340
 else:
-    precokg=340
+    print('codigo da carga invalido')
+    exit()
 
 preco=pesokg*precokg
 preco_imposto=preco*imposto/100
