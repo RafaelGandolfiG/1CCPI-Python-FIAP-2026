@@ -48,7 +48,7 @@ if aprovado=='Aprovado':
 
     taxa=definir_taxa(parcelas)
     parcela=calcular_parcela(emprestimo,taxa,parcelas)
-    total=calcular_total(parcela,parcelas)
+    total=calcular_total(pmt,parcelas)
     juros=calcular_juros(total,emprestimo)
 
     print(f'Nome do cliente: {nome}')
