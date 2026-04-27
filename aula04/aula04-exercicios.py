@@ -2,9 +2,7 @@
 while True:
     print('Hello, World')
     continuar=input('Deseja continuar? ').lower()
-    if continuar=='s':
-        continue
-    else:
+    if continuar!='s':
         print('fim')
         break
     
