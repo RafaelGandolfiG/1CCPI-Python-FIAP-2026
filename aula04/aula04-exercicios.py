@@ -2,7 +2,9 @@
 while True:
     print('Hello, World')
     continuar=input('Deseja continuar? ').lower()
-    if continuar!='s':
+    if continuar=='s':
+        continue
+    else:
         print('fim')
         break
     
@@ -53,3 +55,11 @@ for i in range(numero+1):
         print(i)
 
 # EX9
+for num in range(2, 2001):
+    eh_primo = True  
+    for i in range(2, num):
+        if num % i == 0:
+            eh_primo = False
+            break  
+    if eh_primo:
+        print(num)
