@@ -17,3 +17,13 @@ for i in range(4):
     for j in range(5):
         print(matriz[i][j], end=' ')
     print()
+
+# lista=[]
+# contador=0
+# for i in range(5*4):
+#     lista.append(i)
+# for i in range(4):
+#     for j in range(5):
+#         contador+=1
+#         print(contador, end='')
+#     print()
