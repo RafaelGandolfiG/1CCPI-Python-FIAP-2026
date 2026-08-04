@@ -1,12 +1,12 @@
 def detectar(endpoint):
-    lista = []
+    lista=[]
     for i in range(len(endpoint)):
-        if 200 <= endpoint[i] <= 299:
+        if 200<=endpoint[i]<=299:
             lista.append(True)
         else:
             lista.append(False)
-    for i in range(len(lista) - 1):
-        if not lista[i] and not lista[i + 1]:
+    for i in range(len(lista)-1):
+        if not lista[i] and not lista[i+1]:
             return "seguidos"
     else:
         return "nao seguidos"
