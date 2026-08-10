@@ -10,7 +10,7 @@ for i in email:
         emails[dominio]+=1
 print('quantidade de emails por dominio: ')
 for i in emails:
-    print(f'i: {emails[i]}')
+    print(f'{i}: {emails[i]}')
 print('lista de usuarios: ')
 print(email)
 print(f'primeiro usuario: {email[0]}')
