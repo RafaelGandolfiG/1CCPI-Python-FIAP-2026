@@ -30,6 +30,8 @@ for i in range(4):
 # for i in range(4):
 #     for j in range(5):
 #         lista1[i].append(lista[contador])
-#         print(lista[contador], end=' ')
 #         contador += 1
+# for i in range(4):
+#     for j in range(5):
+#         print(lista1[i][j], end=' ')
 #     print()
