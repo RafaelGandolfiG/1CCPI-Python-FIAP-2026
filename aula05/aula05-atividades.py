@@ -18,12 +18,18 @@ for i in range(4):
         print(matriz[i][j], end=' ')
     print()
 
-# lista=[]
-# contador=0
-# for i in range(5*4):
-#     lista.append(i)
+# contador = 0
+# lista = []
+# lista1 = []
+# for i in range(5 * 4):
+#     contador += 1
+#     lista.append(contador)
+# for i in range(4):
+#     lista1.append([])
+# contador = 0
 # for i in range(4):
 #     for j in range(5):
-#         contador+=1
-#         print(contador, end='')
+#         lista1[i].append(lista[contador])
+#         print(lista[contador], end=' ')
+#         contador += 1
 #     print()
