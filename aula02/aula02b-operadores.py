@@ -8,10 +8,10 @@ print(resultado_op, type(resultado_op))
 
 # OPERADORES DE ATRIBUIÇÃO
 num = 15
-print() # pular linha
+print()  # pular linha
 print(num)
 
-num = num + 2 # acumulando 2
+num = num + 2  # acumulando 2
 print(num)
 
 num *= 2

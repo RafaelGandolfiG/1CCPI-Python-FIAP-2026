@@ -15,7 +15,7 @@ for i in range(4):
         matriz[i].append(numero)
 for i in range(4):
     for j in range(5):
-        print(matriz[i][j], end=' ')
+        print(matriz[i][j], end=" ")
     print()
 
 # contador = 0
