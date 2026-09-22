@@ -18,19 +18,21 @@ def list_leads():
     #   print(df)
     print(f"## | {"nome":<15} | E-mail")
     for i, lead in enumerate(leads):
-        print(f"{i:02d} | {lead["name"]:<15} | {lead["email"]}")   
+        print(f"{i:02d} | {lead["name"]:<15} | {lead["email"]}")
+
 
 def search_leads():
     print("buscando")
-    query=input("Buscar por: ").strip().lower()
-    search_results=control.read_leads_search(query)
+    query = input("Buscar por: ").strip().lower()
+    search_results = control.read_leads_search(query)
     print(f"## | {"nome":<15} | E-mail")
     for i, lead in search_results:
-        print(f"{i:02d} | {lead["name"]:<15} | {lead["email"]}")  
+        print(f"{i:02d} | {lead["name"]:<15} | {lead["email"]}")
+
 
 def export_leads():
     print("lead exportado")
-    path_csv=control.export_csv()
+    path_csv = control.export_csv()
     if path_csv is None:
         print("Nao foi possivel exportar para csv")
     else:
@@ -50,9 +52,9 @@ def main():
             add_lead()
         elif opt == "2":
             list_leads()
-        elif opt=="3":
+        elif opt == "3":
             search_leads()
-        elif opt=="4":
+        elif opt == "4":
             export_leads()
         elif opt == "0":
             print("Saindo...")

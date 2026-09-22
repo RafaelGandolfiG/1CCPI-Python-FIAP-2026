@@ -17,12 +17,15 @@ def read_leads():
 def create_lead(lead_dict):
     leads = read_leads()
     leads.append(lead_dict)
-    DB_PATH.write_text(json.dumps(leads, ensure_ascii=False, indent=2), encoding="utf-8")
+    DB_PATH.write_text(
+        json.dumps(leads, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
 
 def read_leads_search(query):
     """Função que busca por leads a partir da query e retorna uma lista com resultados"""
-    leads=read_leads()
-    results=[]
+    leads = read_leads()
+    results = []
     for i, lead in enumerate(leads):
         txt_lead = f"{lead["name"]} {lead["email"]}".lower()
         print(txt_lead)
@@ -30,13 +33,14 @@ def read_leads_search(query):
             results.append((i, lead))
     return results
 
+
 def export_csv():
     """Exporta todos os leads para CSV e retorna o caminho do arquivo csv"""
-    path_csv=DATA_DIR/"leads.csv"
-    leads=read_leads()
+    path_csv = DATA_DIR / "leads.csv"
+    leads = read_leads()
     try:
         with path_csv.open(mode="w", newline="", encoding="utf-8") as file_csv:
-            writer=csv.DictWriter(file_csv, leads[0].keys())
+            writer = csv.DictWriter(file_csv, leads[0].keys())
             writer.writeheader()
             for dict_row in leads:
                 writer.writerow(dict_row)
