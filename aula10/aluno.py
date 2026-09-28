@@ -14,7 +14,7 @@ class Aluno:
             self.disciplinas.append(disciplina)
         self.notas_por_disciplina.setdefault(disciplina.nome, [])
 
-    def adicionar_nota(self, disciplina: Disciplina, nota:float):
+    def adicionar_nota(self, disciplina: Disciplina, nota: float):
         """Adicionar a nota do aluno no dict referente a 1 disciplina"""
         if disciplina.nome not in self.notas_por_disciplina:
             self.matricular(disciplina)
