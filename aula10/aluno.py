@@ -16,10 +16,21 @@ class Aluno:
             self.disciplinas.append(disciplina)
         self.notas_por_disciplina.setdefault(disciplina.nome, [])
 
+    def apagar_nota(self, disciplina: Disciplina):
+        print(f"Disciplina: {disciplina.nome}")
+        for i, nota in enumerate(self.notas_por_disciplina[disciplina.nome]):
+            print(f"Nota {i}: {nota}")
+        nota = float(input("Digite a nota que deseja apagar: "))
+        if nota in self.notas_por_disciplina[disciplina.nome]:
+            self.notas_por_disciplina[disciplina.nome].remove(nota)
+        else:
+            print("Nota não encontrada.")
+ 
     def adicionar_nota(self, disciplina: Disciplina, nota: float):
-        """Adicionar a nota do aluno no dict referente a 1 disciplina"""
         if disciplina.nome not in self.notas_por_disciplina:
             self.matricular(disciplina)
+        if len(self.notas_por_disciplina[disciplina.nome]) >= 3:
+            self.apagar_nota(disciplina)
         self.notas_por_disciplina[disciplina.nome].append(nota)
 
     def media_por_d(self, d: Disciplina):
@@ -55,8 +66,8 @@ class Aluno:
         medias = []
         for d in self.disciplinas:
             medias.append(self.media_por_d(d))
-        medias=pd.Series(medias, index=df.columns, name="Média")
-        df=pd.concat([df, medias.to_frame().T])
-        df["Média geral"]=None
-        df.loc["Média", "Média geral"]=self.media_geral()
+        medias = pd.Series(medias, index=df.columns, name="Média")
+        df = pd.concat([df, medias.to_frame().T])
+        df["Média geral"] = None
+        df.loc["Média", "Média geral"] = self.media_geral()
         print(df)
