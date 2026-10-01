@@ -15,7 +15,7 @@ def add_lead():
 def list_leads():
     leads = control.read_leads()
     # df=pd.read_json(control.DB_PATH)
-    #   print(df)
+    # print(df)
     print(f"## | {"nome":<15} | E-mail")
     for i, lead in enumerate(leads):
         print(f"{i:02d} | {lead["name"]:<15} | {lead["email"]}")
