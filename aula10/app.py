@@ -3,25 +3,30 @@ from disciplina import Disciplina
 
 aluno1 = Aluno("Paulo", "123456", "Ciência da Computação")
 
+disciplinas = {
+    "Modelagem Linear": Disciplina("Modelagem Linear", "Rodolfo"),
+    "Data Structures": Disciplina("Data Structures", "Erick"),
+}
+
 # print(aluno1.nome)
 # print(aluno1.matricula)
 # print(aluno1.curso)
 # print(aluno1.disciplinas)
 # print(aluno1.notas_por_disciplina)
 
-model_lin = Disciplina("Modelagem Linear", "Rodolfo")
-dsa = Disciplina("Data Structures", "Erick")
+# model_lin = Disciplina("Modelagem Linear", "Rodolfo")
+# dsa = Disciplina("Data Structures", "Erick")
 
-aluno1.matricular(model_lin)
-aluno1.matricular(dsa)
+aluno1.matricular(disciplinas["Modelagem Linear"])
+aluno1.matricular(disciplinas["Data Structures"])
 
 # print(aluno1.disciplinas[0].nome)
 # print(aluno1.disciplinas[1].nome)
 
-aluno1.adicionar_nota(model_lin, 10)
-aluno1.adicionar_nota(model_lin, 6)
-aluno1.adicionar_nota(dsa, 5)
-aluno1.adicionar_nota(dsa, 4)
+aluno1.adicionar_nota(disciplinas["Modelagem Linear"], 10)
+aluno1.adicionar_nota(disciplinas["Modelagem Linear"], 6)
+aluno1.adicionar_nota(disciplinas["Data Structures"], 5)
+aluno1.adicionar_nota(disciplinas["Data Structures"], 4)
 
 # print(aluno1.notas_por_disciplina["Modelagem Linear"])
 

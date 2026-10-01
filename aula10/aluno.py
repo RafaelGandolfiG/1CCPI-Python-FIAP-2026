@@ -25,7 +25,7 @@ class Aluno:
             self.notas_por_disciplina[disciplina.nome].remove(nota)
         else:
             print("Nota não encontrada.")
- 
+
     def adicionar_nota(self, disciplina: Disciplina, nota: float):
         if disciplina.nome not in self.notas_por_disciplina:
             self.matricular(disciplina)
@@ -62,7 +62,11 @@ class Aluno:
     def tabela_boletim(self):
         print(f"Aluno: {self.nome} | Matricula: {self.matricula} Curso: {self.curso}")
         df = pd.DataFrame(self.notas_por_disciplina)
-        df.index = [f"Nota {i + 1}" for i in range(len(df))]
+        # df.index = [f"Nota {i + 1}" for i in range(len(df))]
+        indices = []
+        for i in range(len(df)):
+            indices.append(f"nota {i+1}")
+        df.index = indices
         medias = []
         for d in self.disciplinas:
             medias.append(self.media_por_d(d))
