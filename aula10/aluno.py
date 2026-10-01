@@ -48,7 +48,7 @@ class Aluno:
             print(f"Disciplina: {i.nome} | Media: {self.media_por_d(i)}")
         print(f"Media geral: {self.media_geral()}")
 
-    def boletim(self):
+    def tabela_boletim(self):
         print(f"Aluno: {self.nome} | Matricula: {self.matricula} Curso: {self.curso}")
         df = pd.DataFrame(self.notas_por_disciplina)
         df.index = [f"Nota {i + 1}" for i in range(len(df))]

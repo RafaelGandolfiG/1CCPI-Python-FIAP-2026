@@ -29,4 +29,6 @@ aluno1.adicionar_nota(dsa, 4)
 
 # print(aluno1.media_geral())
 
-aluno1.boletim()
+aluno1.exibir_boletim()
+
+aluno1.tabela_boletim()
